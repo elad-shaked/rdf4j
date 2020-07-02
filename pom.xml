@@ -46,28 +46,20 @@
 	</modules>
 	<profiles>
 		<profile>
-			<id>ossrh</id>
+			<id>ai-rdf-pipeline-mixed</id>
 			<distributionManagement>
+				<repository>
+					<id>ai-rdf-pipeline-mixed</id>
+					<name>Releases</name>
+					<url>https://nexus.dev.sparkbeyond.ai/repository/ai-rdf-pipeline-mixed/</url>
+				</repository>
 				<snapshotRepository>
-					<id>ossrh</id>
-					<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+					<id>ai-rdf-pipeline-mixed</id>
+					<url>https://nexus.dev.sparkbeyond.ai/repository/ai-rdf-pipeline-mixed/</url>
 				</snapshotRepository>
 			</distributionManagement>
 			<build>
 				<plugins>
-					<plugin>
-						<groupId>org.sonatype.plugins</groupId>
-						<artifactId>nexus-staging-maven-plugin</artifactId>
-						<version>1.6.8</version>
-						<extensions>true</extensions>
-						<configuration>
-							<serverId>ossrh</serverId>
-							<nexusUrl>https://oss.sonatype.org/</nexusUrl>
-							<autoReleaseAfterClose>true</autoReleaseAfterClose>
-							<stagingProgressTimeoutMinutes>120</stagingProgressTimeoutMinutes>
-							<stagingProgressPauseDurationSeconds>10</stagingProgressPauseDurationSeconds>
-						</configuration>
-					</plugin>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-source-plugin</artifactId>
@@ -969,13 +961,13 @@
 	<repositories>
 		<repository>
 			<releases>
-				<enabled>false</enabled>
+				<enabled>true</enabled>
 			</releases>
 			<snapshots>
 				<enabled>true</enabled>
 			</snapshots>
-			<id>oss-sonatype-snapshots</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+			<id>ai-rdf-pipeline-mixed</id>
+			<url>https://nexus.dev.sparkbeyond.ai/repository/ai-rdf-pipeline-mixed/</url>
 		</repository>
 	</repositories>
 	<scm>
